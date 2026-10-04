@@ -15,16 +15,15 @@
             flex-wrap: wrap;
         }
 
-        /* Common photo styling */
         .photo {
             width: 250px;
             height: 250px;
             object-fit: cover;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 20px rgba(255,255,255,0.4);
         }
 
-        /* Animation 1: Zoom on Hover */
+        /* Animation 1: Zoom */
         .zoom {
             transition: transform 0.5s ease;
         }
@@ -32,7 +31,7 @@
             transform: scale(1.2) rotate(5deg);
         }
 
-        /* Animation 2: Float (up-down) */
+        /* Animation 2: Float */
         .float {
             animation: floatAnim 3s ease-in-out infinite;
         }
@@ -41,23 +40,12 @@
             50%  { transform: translateY(-25px); }
             100% { transform: translateY(0); }
         }
-
-        /* Animation 3: Rotate */
-        .rotate {
-            animation: rotateAnim 8s linear infinite;
-        }
-        @keyframes rotateAnim {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Same photo, 3 different animations -->
-    <img src="photo.jpg" alt="Photo" class="photo zoom">
-    <img src="photo.jpg" alt="Photo" class="photo float">
-    <img src="photo.jpg" alt="Photo" class="photo rotate">
+    <img src="photo.jpg" alt="Photo 1" class="photo zoom">
+    <img src="photo.jpg" alt="Photo 2" class="photo float">
 
 </body>
 </html>
