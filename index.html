@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Animated Photo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            min-height: 100vh;
+            background: #111;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        /* Common photo styling */
+        .photo {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Animation 1: Zoom on Hover */
+        .zoom {
+            transition: transform 0.5s ease;
+        }
+        .zoom:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Animation 2: Float (up-down) */
+        .float {
+            animation: floatAnim 3s ease-in-out infinite;
+        }
+        @keyframes floatAnim {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-25px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Animation 3: Rotate */
+        .rotate {
+            animation: rotateAnim 8s linear infinite;
+        }
+        @keyframes rotateAnim {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Same photo, 3 different animations -->
+    <img src="photo.jpg" alt="Photo" class="photo zoom">
+    <img src="photo.jpg" alt="Photo" class="photo float">
+    <img src="photo.jpg" alt="Photo" class="photo rotate">
+
+</body>
+</html>
